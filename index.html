@@ -18,17 +18,22 @@
 <meta property="og:title" content="Mathieu El Almawie — Business Analyst / MOA"/>
 <meta property="og:description" content="Consultant Aubay. Spec d’abord, puis livraison, recette, data et run. Prochaine mission : BRED."/>
 <meta property="og:site_name" content="Mathieu El Almawie"/>
-<meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Mathieu El Almawie — Business Analyst / MOA"/>
 <meta name="twitter:description" content="Consultant Aubay. Spec, livraison, recette, data et run."/>
+<meta property="og:image" content="https://mthlabs.github.io/Portofolio/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:image" content="https://mthlabs.github.io/Portofolio/og-image.png"/>
 <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
 :root{
   --bg:#F4FAF0; --s1:#EAF4E4; --s2:#E0EED6; --s3:#D4E8C8; --s4:#EAF4E4; --s5:#F4FAF0;
-  --card:#FFFcf8; --ink:#2D3A2E; --muted:#5E6B5C; --acc:#C5DDB8; --on:#2D3A2E;
+  --card:#FFFcf8; --ink:#2D3A2E; --muted:#3F4C3E; --acc:#C5DDB8; --on:#2D3A2E;
   --font:"Plus Jakarta Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
   --r:28px;
 }
@@ -103,6 +108,13 @@ h3 img.brand{height:22px;width:auto;max-width:72px;object-fit:contain;vertical-a
 .quote{font-size:clamp(1.25rem,3vw,1.7rem);font-weight:500;letter-spacing:-.03em;line-height:1.25;max-width:22ch;margin:0 0 2rem}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .65s cubic-bezier(.22,1,.36,1),transform .65s cubic-bezier(.22,1,.36,1)}
 .reveal.on{opacity:1;transform:none}
+a:focus-visible,button:focus-visible,.sw:focus-visible{
+  outline:2px solid var(--ink);outline-offset:3px;
+}
+@media (prefers-reduced-motion: reduce){
+  .reveal,.reveal.on{opacity:1;transform:none;transition:none}
+  header.top{transition:none}
+}
 footer{background:var(--s5);color:var(--muted);padding:0 0 2rem;font-size:.84rem}
 @media (max-width:820px){
   .bar{flex-wrap:wrap;align-items:center}
@@ -213,7 +225,8 @@ html,body,header.top,.band,footer{-webkit-tap-highlight-color:transparent;forced
 <section class="band" id="contact">
   <div class="wrap reveal">
     <h2 data-i="c_h"></h2>
-    <p class="sub"><a href="mailto:mathieu.elalmawie@gmail.com">mathieu.elalmawie@gmail.com</a><br>
+    <p class="sub">Consultant Aubay · en mission.<br>
+    <a href="mailto:mathieu.elalmawie@gmail.com">mathieu.elalmawie@gmail.com</a><br>
     <a href="https://www.linkedin.com/in/mathieu-el-almawie-ba9400b8" target="_blank" rel="noopener">LinkedIn</a></p>
   </div>
 </section>
@@ -223,7 +236,7 @@ html,body,header.top,.band,footer{-webkit-tap-highlight-color:transparent;forced
 const T={
 pistache:{
   bg:"#F4FAF0",s1:"#EAF4E4",s2:"#E0EED6",s3:"#D4E8C8",s4:"#EAF4E4",s5:"#F4FAF0",
-  card:"#FFFcf8",ink:"#2D3A2E",muted:"#5E6B5C",acc:"#C5DDB8",on:"#2D3A2E"
+  card:"#FFFcf8",ink:"#2D3A2E",muted:"#3F4C3E",acc:"#C5DDB8",on:"#2D3A2E"
 },
 creme:{
   bg:"#FBF7F0",s1:"#F5F0E6",s2:"#EFE8DA",s3:"#E7DFD0",s4:"#F5F0E6",s5:"#FBF7F0",
@@ -320,34 +333,34 @@ en:[
 };
 const ia={
 fr:[
-["Raisonnement","GPT,Claude,Gemini,Grok,Mistral,Copilot,DeepSeek,Euria","Multi-modèles,Spec-driven"],
-["Agents de code","Claude Code,Cursor,Codex,Cline,VS Code,OpenRouter,Grok Build","Agents,IDE"],
-["Image & vidéo","GPT,Gemini,Grok Imagine,Fal.ai,OpenArt","Image-to-video,Génération"],
-["Voix & son","ElevenLabs,Suno","TTS,Musique"],
-["Pilotage","Notion","Docs,Organisation"]
+["Raisonnement","GPT,Claude,Gemini,Grok,Mistral,Copilot,DeepSeek,Euria","Multi-modèles,Spec-driven","Comparer plusieurs modèles sur une même spec, garder celui qui tient la contrainte."],
+["Agents de code","Claude Code,Cursor,Codex,Cline,VS Code,OpenRouter,Grok Build","Agents,IDE","Passer d’une spec à un patch, une PR ou un contrôle — sans écrire le livrable à la main."],
+["Image & vidéo","GPT,Gemini,Grok Imagine,Fal.ai,OpenArt","Image-to-video,Génération","Moodboards, visuels Lab et plans Keepy Studio."],
+["Voix & son","ElevenLabs,Suno","TTS,Musique","Voix-off et pistes pour les pièces Keepy Studio."],
+["Pilotage","Notion","Docs,Organisation","Source de vérité : backlog, décisions, run."]
 ],
 en:[
-["Reasoning","GPT,Claude,Gemini,Grok,Mistral,Copilot,DeepSeek,Euria","Multi-model"],
-["Coding agents","Claude Code,Cursor,Codex,Cline,VS Code,OpenRouter,Grok Build","Agents,IDE"],
-["Image & video","GPT,Gemini,Grok Imagine,Fal.ai,OpenArt","Image-to-video"],
-["Voice & sound","ElevenLabs,Suno","TTS,Music"],
-["Ops","Notion","Docs"]
+["Reasoning","GPT,Claude,Gemini,Grok,Mistral,Copilot,DeepSeek,Euria","Multi-model","Run the same spec across models and keep the one that holds the constraint."],
+["Coding agents","Claude Code,Cursor,Codex,Cline,VS Code,OpenRouter,Grok Build","Agents,IDE","Turn a spec into a patch, a PR or a check — without hand-writing the deliverable."],
+["Image & video","GPT,Gemini,Grok Imagine,Fal.ai,OpenArt","Image-to-video","Moodboards, Lab visuals and Keepy Studio frames."],
+["Voice & sound","ElevenLabs,Suno","TTS,Music","Voice-over and tracks for Keepy Studio."],
+["Ops","Notion","Docs","Source of truth: backlog, decisions, run."]
 ]
 };
 const lab={
 fr:[
-["Keepr","Messagerie et souvenirs partagés.","React,Vite,Firebase,Google Cloud,Vercel,OneSignal,Playwright,BigQuery"],
-["Keepr Analytics","Monitoring sécurité, coûts, stockage et stats (messages, events).","Firebase,Google Cloud,BigQuery"],
-["Moments","Sorties et albums photo.","React,Firebase,Vercel"],
-["Keepy","Mini-jeu open world. Godot 4.3.","Godot,GDScript,Meshy 3D"],
-["Keepy Studio","Studio de production vidéo IA.","GPT,Gemini,Grok Imagine,ElevenLabs,Suno,Fal.ai,OpenArt"]
+["Keepr","Messagerie privée et souvenirs partagés. Conçu, cadré et recetté comme une spec produit.","React,Vite,Firebase,Google Cloud,Vercel,OneSignal,Playwright,BigQuery"],
+["Keepr Analytics","Console d’exploitation : sécurité, coûts, stockage, stats. Sans lire les conversations.","Firebase,Google Cloud,BigQuery"],
+["Moments","Sorties et albums photo, branché sur le même socle Keepr.","React,Firebase,Vercel"],
+["Keepy","Mini-jeu solo, monde ouvert. Godot 4.3, prod assistée par IA.","Godot,GDScript,Meshy 3D"],
+["Keepy Studio","Chaîne image / voix / musique pour produire les cinématiques Keepy.","GPT,Gemini,Grok Imagine,ElevenLabs,Suno,Fal.ai,OpenArt"]
 ],
 en:[
-["Keepr","Messaging and shared memories.","React,Vite,Firebase,Google Cloud,Vercel,OneSignal,Playwright,BigQuery"],
-["Keepr Analytics","Security, cost, storage and product stats (messages, events).","Firebase,Google Cloud,BigQuery"],
-["Moments","Outings and albums.","React,Firebase,Vercel"],
-["Keepy","Open-world leaning game. Godot 4.3.","Godot,GDScript,Meshy 3D"],
-["Keepy Studio","AI video studio.","GPT,Gemini,Grok Imagine,ElevenLabs,Suno,Fal.ai,OpenArt"]
+["Keepr","Private messaging and shared memories. Designed, steered and signed off like a product spec.","React,Vite,Firebase,Google Cloud,Vercel,OneSignal,Playwright,BigQuery"],
+["Keepr Analytics","Ops console: security, cost, storage, stats. Never reads conversations.","Firebase,Google Cloud,BigQuery"],
+["Moments","Outings and albums, on the same Keepr stack.","React,Firebase,Vercel"],
+["Keepy","Solo open-world leaning game. Godot 4.3, AI-assisted production.","Godot,GDScript,Meshy 3D"],
+["Keepy Studio","Image / voice / music pipeline for Keepy cinematics.","GPT,Gemini,Grok Imagine,ElevenLabs,Suno,Fal.ai,OpenArt"]
 ]
 };
 
@@ -472,7 +485,7 @@ function paint(){
   document.getElementById("formation-list").innerHTML=edu[lang].map(x=>card(
   brandImg(x[0])+" "+x[0], x[1], x[2], "", x[3]||""
 )).join("");
-  document.getElementById("ia-list").innerHTML=ia[lang].map(x=>`<article class="block"><h3>${x[0]}</h3>${toolRow(x[1])}${chips(x[2])}</article>`).join("");
+  document.getElementById("ia-list").innerHTML=ia[lang].map(x=>`<article class="block"><h3>${x[0]}</h3>${x[3]?`<p>${x[3]}</p>`:""}${toolRow(x[1])}${chips(x[2])}</article>`).join("");
   document.getElementById("lab-list").innerHTML=lab[lang].map(x=>{
   const src=APPLOGOS[x[0]];
   const img=src?`<img class="app-ico" alt="${x[0]}" src="${src}"/>`:(brandImg(x[0])||"");
