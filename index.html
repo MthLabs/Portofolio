@@ -434,6 +434,18 @@ function analyticsPlaquette(lang){
     :{kicker:"Étude de cas",body:"Comment la console d’exploitation voit l’usage, les coûts et les accès — sans jamais lire les conversations.",cta:"Télécharger le PDF",file:"Keepr_Analytics_etude_de_cas.pdf",meta:"6 pages · septembre 2026"};
   return `<div class="keepr-plaquette"><p class="keepr-plaquette-kicker">${t.kicker}</p><p>${t.body}</p><div class="keepr-plaquette-row"><a href="${t.file}" download>${t.cta}</a><p class="keepr-plaquette-meta">${t.meta}</p></div></div>`;
 }
+function momentsPlaquette(lang){
+  const t=lang==="en"
+    ?{kicker:"Case study",body:"Moments, a private shared-memories journal: migration to Firebase, real-time notifications, documented trade-offs. PDF in French.",cta:"Download the PDF",file:"Moments_etude_de_cas.pdf",meta:"6 pages · October 2026"}
+    :{kicker:"Étude de cas",body:"Moments, journal de souvenirs partagés : migration vers Firebase, notifications temps réel, arbitrages documentés.",cta:"Télécharger le PDF",file:"Moments_etude_de_cas.pdf",meta:"6 pages · octobre 2026"};
+  return `<div class="keepr-plaquette"><p class="keepr-plaquette-kicker">${t.kicker}</p><p>${t.body}</p><div class="keepr-plaquette-row"><a href="${t.file}" download>${t.cta}</a><p class="keepr-plaquette-meta">${t.meta}</p></div></div>`;
+}
+function keepyPlaquette(lang){
+  const t=lang==="en"
+    ?{kicker:"Dossier",body:"Keepy — open world. Solo mobile game, AI-assisted production. PDF in French.",cta:"Download the PDF",file:"Keepy_dossier.pdf",meta:"2 pages · August 2026"}
+    :{kicker:"Dossier",body:"Keepy — monde ouvert. Jeu mobile solo, développement assisté par IA.",cta:"Télécharger le PDF",file:"Keepy_dossier.pdf",meta:"2 pages · août 2026"};
+  return `<div class="keepr-plaquette"><p class="keepr-plaquette-kicker">${t.kicker}</p><p>${t.body}</p><div class="keepr-plaquette-row"><a href="${t.file}" download>${t.cta}</a><p class="keepr-plaquette-meta">${t.meta}</p></div></div>`;
+}
 function card(title,meta,body,extra,ch){
   return `<article class="block"><h3>${title}</h3>${meta?`<p class="meta">${meta}</p>`:""}${body?`<p>${body}</p>`:""}${extra?`<p><strong>${extra}</strong></p>`:""}${chips(ch)}</article>`;
 }
@@ -464,7 +476,7 @@ function paint(){
   document.getElementById("lab-list").innerHTML=lab[lang].map(x=>{
   const src=APPLOGOS[x[0]];
   const img=src?`<img class="app-ico" alt="${x[0]}" src="${src}"/>`:(brandImg(x[0])||"");
-  const plaquette=x[0]==="Keepr"?keeprPlaquette(lang):x[0]==="Keepr Analytics"?analyticsPlaquette(lang):"";
+  const plaquette=x[0]==="Keepr"?keeprPlaquette(lang):x[0]==="Keepr Analytics"?analyticsPlaquette(lang):x[0]==="Moments"?momentsPlaquette(lang):x[0]==="Keepy"?keepyPlaquette(lang):"";
   return `<article class="block"><h3>${img} ${x[0]}</h3><p>${x[1]}</p>${toolRow(x[2])}${plaquette}</article>`;
 }).join("");
 }
