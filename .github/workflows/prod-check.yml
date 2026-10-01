@@ -1,0 +1,22 @@
+name: prod-check
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+  workflow_dispatch:
+jobs:
+  prod:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    env:
+      BASE_URL: https://mthlabs.github.io/Portofolio/
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test tests/prod.spec.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: prod-check, path: test-results/ }
